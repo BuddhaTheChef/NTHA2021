@@ -2,9 +2,9 @@ Directions
 
 Step 1: make sure you have python3 installed visit: https://www.python.org/downloads/ to download your verison
 
-Step 2: Create an empty folder on your desktop and go to this repository: -----repo here-----
+Step 2: Create an empty folder on your desktop and go to this repository: https://github.com/BuddhaTheChef/NTHA2021
 
-Step 3: In terminal or command prompt navigate into newly created folder and run git clone ----repo clone ----
+Step 3: In terminal or command prompt navigate into newly created folder and run "git clone https://github.com/BuddhaTheChef/NTHA2021.git"
 
 Step 4: Open the folder with the text editor of your choice you should see these files:
 
