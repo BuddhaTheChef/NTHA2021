@@ -25,7 +25,7 @@ Step 6: To connect .txt file to solve.py and view parameters add code below insi
 		line = line.strip()
 		print( line )
 
-Step 7: To view incoming parameters run "python solve.py input.txt" 
+Step 7: To view incoming parameters run "python3 solve.py input.txt" 
 
 Step 8: The first bug I decided to fix is within the "parse_input(filepath)" function, it was throwing an error because it would include the grid size along with the rectangles it was trying to parse through so it would throw "ValueError: not enough values to unpack (expected 3, got 2)" becaue the first input of the txt file was only 2 characters. I decided to start itterating after the 0th index starting at the first which returned all the rectangles with their pid, length, width: "for i in range(1,len(file_contents))"
 

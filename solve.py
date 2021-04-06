@@ -32,12 +32,13 @@ class PuzzleBoard():
             return False
 
         #TODO: Check if any part of the piece is out of bounds
-        if not piece.within(self):
+        if (self.state < piece.l or self.state < piece.w):
             return False
 
         #TODO: Check if piece can be placed without intersecting another placed piece
+        if (self.l >= piece.l and self.l <= piece.l and self.w >= piece.w and self.w <= piece.w):
+            return False
         
-
         return True
 
     # Input: piece - PuzzlePiece object
@@ -45,6 +46,7 @@ class PuzzleBoard():
     def place(self, piece):
         # TODO: Bug in this function. Pieces not being placed correctly.
         position = self.__next()
+        #switched bottom two lines of code
         for i in range(position[1], position[1] + piece.w):
             for j in range(position[0], position[0] + piece.l):
                 self.state[j][i] = piece.id
@@ -160,8 +162,8 @@ def solve(board, remaining, used_pieces=[]):
 
 def main():
     #TODO: Bug in this function. Positions are not correct after solution is found.
+    #read file to check input5 parameters
 
-    #read file 
     # file = open("input5.txt", "r")
     # lines = file.readlines()
     # file.close()
@@ -169,7 +171,6 @@ def main():
     # for line in lines:
     # 	line = line.strip()
     # 	print( line )
-
 
     parser = argparse.ArgumentParser()
     parser.add_argument('input')
